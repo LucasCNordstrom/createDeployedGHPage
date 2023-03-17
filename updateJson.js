@@ -1,5 +1,4 @@
 const fs = require('fs');
-// import { argv } from 'process';
 
 const pathToPackageJSON = process.argv[2];
 const nameOfRepo = process.argv[3];
