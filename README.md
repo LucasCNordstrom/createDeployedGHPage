@@ -23,8 +23,8 @@ This will prompt you to choose a name for your project (This will also be your g
 
 All of these are directly using vite's own templates.
 
-After that,a few seconds and the scripts will be done.
+After those few seconds the script will be done.
 
-Wait a minute and you'll be able to go to your see your page at *'yourGitHubUsername.github.io/nameOfYourProject'*
+Wait a minute and you'll be able to go to your page at *'yourGitHubUsername.github.io/nameOfYourProject'*
 
 Hope that helps!

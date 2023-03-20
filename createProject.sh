@@ -6,13 +6,30 @@ printf "Type the name of your react project . -> "
 
 read APPNAME
 
-printf "Type the template you want to use- the following are available
-react-ts
-preact-ts
-vanilla-ts
-. -> "
+PS3="Choose the template you want to use- "
 
-read TEMPLATE
+select TEMPLATE in react-ts preact-ts vanilla-ts
+do
+    case $TEMPLATE in
+        react-ts)
+        echo "selected template: $TEMPLATE"
+        break
+        ;;
+        preact-ts)
+        echo "selected template: $TEMPLATE"
+        break
+        ;;
+        preact-ts)
+        echo "selected template: $TEMPLATE"
+        break
+        ;;
+        *)
+        echo "Not supported template"
+        ;;
+    esac
+done
+
+printf "Will create a viteProject with $TEMPLATE as template"
 
 npm create vite@latest $APPNAME -- --template $TEMPLATE
 
@@ -24,7 +41,7 @@ cd $APPNAME && npm install gh-pages --save-dev
 
 cd .. && node updateJson.js $APPNAME/package.json $APPNAME
 
-printf "You just created $APPNAME with $TEMPLATE, i will go to sleep 2 seconds"
+printf "You just created $APPNAME with $TEMPLATE, i will wait 2 seconds while installing things"
 
 sleep 2
 
